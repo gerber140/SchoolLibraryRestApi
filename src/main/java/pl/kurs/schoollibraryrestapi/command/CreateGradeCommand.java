@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
 import lombok.Data;
 import pl.kurs.schoollibraryrestapi.model.GradeLevel;
+import pl.kurs.schoollibraryrestapi.validations.NonVulgar;
 
 import java.time.LocalDate;
 
@@ -19,6 +20,7 @@ public class CreateGradeCommand {
     @NotBlank
     private String schoolSubject;
     @NotBlank
+    @NonVulgar
     private String description;
     @NotNull
     private Long teacherNo;

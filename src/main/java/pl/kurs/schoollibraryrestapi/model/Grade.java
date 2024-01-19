@@ -1,11 +1,11 @@
 package pl.kurs.schoollibraryrestapi.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import pl.kurs.schoollibraryrestapi.services.Identificationable;
-import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.io.Serializable;
 import java.time.LocalDate;

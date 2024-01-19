@@ -1,7 +1,10 @@
 package pl.kurs.schoollibraryrestapi.model;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import pl.kurs.schoollibraryrestapi.services.Identificationable;
 
 import java.io.Serializable;
 
@@ -10,7 +13,7 @@ import java.io.Serializable;
 @RequiredArgsConstructor
 @Getter
 @Setter
-public class Employee implements Serializable {
+public class Employee implements Serializable, Identificationable {
 
     private static final long serialVersionUID = 1L;
 
@@ -27,7 +30,5 @@ public class Employee implements Serializable {
 
     @Column(unique = true)
     private String password;
-
-    //TODO zadanie do zrobienia w podsumowanie.txt napisane
 
 }

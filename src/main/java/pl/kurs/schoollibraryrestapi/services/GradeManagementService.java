@@ -1,8 +1,8 @@
 package pl.kurs.schoollibraryrestapi.services;
 
 import org.springframework.stereotype.Service;
-import pl.kurs.schoollibraryrestapi.repository.GradeRepository;
 import pl.kurs.schoollibraryrestapi.model.Grade;
+import pl.kurs.schoollibraryrestapi.repository.GradeRepository;
 
 import java.util.List;
 

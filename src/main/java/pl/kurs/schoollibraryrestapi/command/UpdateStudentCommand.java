@@ -1,20 +1,25 @@
 package pl.kurs.schoollibraryrestapi.command;
 
+
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Past;
-import lombok.Data;
-import pl.kurs.schoollibraryrestapi.validations.Pesel;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDate;
 
-@Data
-public class CreateStudentCommand {
+@Getter
+@Setter
+@AllArgsConstructor
+public class UpdateStudentCommand {
+    @NotNull
+    private long id;
     @NotBlank
     private String firstName;
     @NotBlank
     private String lastName;
-    @Pesel
     private String pesel;
     @Past
     private LocalDate birthDate;
